@@ -1,0 +1,476 @@
+﻿DUID,Cat,Batt Load,NEM Tech Type,NEM Fuel Type
+ADPBA1,battery,,Storage - Battery,Other - Other
+ADPBA1G,battery,,,
+ADPBA1L,battery,y,,
+ADPPV1,solar,,Solar PV - Fixed,Solar - Solar
+AGLHAL,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+AGLSOM,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+ANGAST1,fossil,,Reciprocating Engine - Compression ignition,Fossil - Diesel
+ARWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+AVLSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BALB1,battery,,Storage - Battery,Other - Other
+BALBG1,battery,,,
+BALBL1,battery,y,,
+BALDHWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+BANGOWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+BANGOWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+BANN1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BARCALDN,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+BARCSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BARKIPS1,fossil,,Reciprocating Engine - Spark ignition,Fossil - Natural Gas Pipeline
+BARRON-1,hydro,,Hydro - Run of River,Hydro - Water
+BARRON-2,hydro,,Hydro - Run of River,Hydro - Water
+BASTYAN,hydro,,Hydro - Dam,Hydro - Water
+BBATRYL1,battery,y,,
+BBATTERY,battery,,Storage - Battery,Other - Other
+BBATTERY1,battery,,,
+BBTHREE1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+BBTHREE2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+BDL01,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+BDL02,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+BERYLSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BHB1,battery,,,
+BHBG1,battery,,Storage - Battery,Other - Other
+BHBL1,battery,y,,
+BLOWERNG,hydro,,Hydro - Dam,Hydro - Water
+BLUEGSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BLUFF1,wind,,Wind Turbine - Onshore,Wind - Wind
+BLYTHB1,battery,,Storage - Battery,Other - Other
+BNGSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BNGSF2,solar,,Solar PV - Single axis tracking,Solar - Solar
+BOCORWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+BODWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+BOLIVPS1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+BOMENSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+BOWWBA1,battery,,Storage - Battery,Other - Other
+BOWWBA1G,battery,,,
+BOWWBA1L,battery,y,,
+BOWWPV1,solar,,Solar PV - Fixed,Solar - Solar
+BRAEMAR1,fossil,,Turbine - OCGT,Fossil - Coal Seam Methane
+BRAEMAR2,fossil,,Turbine - OCGT,Fossil - Coal Seam Methane
+BRAEMAR3,fossil,,Turbine - OCGT,Fossil - Coal Seam Methane
+BRAEMAR5,fossil,,Turbine - OCGT,Fossil - Coal Seam Methane
+BRAEMAR6,fossil,,Turbine - OCGT,Fossil - Coal Seam Methane
+BRAEMAR7,fossil,,Turbine - OCGT,Fossil - Coal Seam Methane
+BROKENH1,solar,,Solar PV - Fixed,Solar - Solar
+BRYB1WF1,wind,,Wind Turbine - Onshore,Wind - Wind
+BRYB2WF2,wind,,Wind Turbine - Onshore,Wind - Wind
+BULBES1,battery,,Storage - Battery,Other - Other
+BULBESG1,battery,,,
+BULBESL1,battery,y,,
+BULGANA1,wind,,Wind Turbine - Onshore,Wind - Wind
+BUTLERSG,hydro,,Hydro - Dam,Hydro - Water
+BW01,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+BW02,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+BW03,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+BW04,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+BWTR1,renewable,,Turbine - Steam Sub Critical,Renewable Biomass or Waste - Biomass
+CALL_B_1,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+CALL_B_2,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+CAPBES1,battery,,Storage - Battery,Other - Other
+CAPBES1G,battery,,,
+CAPBES1L,battery,y,,
+CAPTL_WF,wind,,Wind Turbine - Onshore,Wind - Wind
+CATHROCK,wind,,Wind Turbine - Onshore,Wind - Wind
+CBWWBA1,battery,,Storage - Battery,Other - Other
+CBWWBA1G,battery,,,
+CBWWBA1L,battery,y,,
+CETHANA,hydro,,Hydro - Dam,Hydro - Water
+CG1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+CG2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+CG3,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+CG4,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+CHALLHWF,wind,,Wind Turbine - Onshore,Wind - Wind
+CHBESS1,battery,,,
+CHBESSG1,battery,,Storage - Battery,Other - Other
+CHBESSL1,battery,y,,
+CHILDSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+CHYTWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+CLARESF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+CLEMGPWF,wind,,Wind Turbine - Onshore,Wind - Wind
+CLERMSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+CLOVER,hydro,,Hydro - Dam,Hydro - Water
+CLRKCWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+CLUNY,hydro,,Hydro - Dam,Hydro - Water
+CNUNDAWF,wind,,Wind Turbine - Onshore,Wind - Wind
+COHUNSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+COLEASF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+COLUMSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+COLWF01,wind,,Wind Turbine - Onshore,Wind - Wind
+CONDONG1,renewable,,Turbine - Steam Sub Critical,Renewable Biomass or Waste - Bagasse
+COOPGWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+CPP_3,fossil,,Turbine - Steam Super Critical,Fossil - Black Coal
+CPP_4,fossil,,Turbine - Steam Super Critical,Fossil - Black Coal
+CPSA,fossil,,Turbine - CCGT,Fossil - Coal Seam Methane
+CROOKWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+CROOKWF3,wind,,Wind Turbine - Onshore,Wind - Wind
+CROWLWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+CRURWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+CRWASF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+CSPVPS1,solar,,Solar PV - Fixed,Solar - Solar
+CTHLWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+CULLRGWF,wind,,Wind Turbine - Onshore,Wind - Wind
+DALNTH01,battery,,,
+DALNTH1,battery,,Storage - Battery,Other - Other
+DALNTHL1,battery,y,,
+DARLSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+DARTM1,hydro,,Hydro - Dam,Hydro - Water
+DAYDSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+DDPS1,fossil,,Turbine - CCGT,Fossil - Coal Seam Methane
+DDSF1,solar,,Solar PV - Fixed,Solar - Solar
+DEVILS_G,hydro,,Hydro - Dam,Hydro - Water
+DIAPURWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+DPNTB1,battery,,Storage - Battery,Other - Other
+DPNTBG1,battery,,,
+DPNTBL1,battery,y,,
+DRYCGT1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+DRYCGT2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+DRYCGT3,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+DULAWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+DUNDWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+DUNDWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+DUNDWF3,wind,,Wind Turbine - Onshore,Wind - Wind
+EDENVSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+EILDON1,hydro,,Hydro - Dam,Hydro - Water
+EILDON2,hydro,,Hydro - Dam,Hydro - Water
+ELAINWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+EMERASF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+ER01,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+ER02,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+ER03,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+ER04,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+ERGT01,fossil,,Turbine - OCGT,Fossil - Diesel
+FINLYSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+FISHER,hydro,,Hydro - Dam,Hydro - Water
+FLYCRKWF,wind,,Wind Turbine - Onshore,Wind - Wind
+GANGARR1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GANNB1,battery,,Storage - Battery,Other - Other
+GANNBG1,battery,,,
+GANNBL1,battery,y,,
+GANNSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GB01,fossil,,Turbine - OCGT,Fossil - Diesel
+GERMCRK,fossil,,Reciprocating Engine - Spark ignition,Fossil - Waste Coal Mine Gas
+GIRGSF,solar,,Solar PV - Single axis tracking,Solar - Solar
+GLENSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GLRWNSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GNNDHSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GOONSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GORDON,hydro,,Hydro - Dam,Hydro - Water
+GPWFEST1,wind,,Wind Turbine - Onshore,Wind - Wind
+GPWFEST2,wind,,Wind Turbine - Onshore,Wind - Wind
+GRANWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+GRIFSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+GSTONE1,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+GSTONE2,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+GSTONE3,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+GSTONE4,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+GSTONE5,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+GSTONE6,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+GSWF1A,wind,,Wind Turbine - Onshore,Wind - Wind
+GSWF1B1,wind,,Wind Turbine - Onshore,Wind - Wind
+GULLRSF1,solar,,Solar PV - Fixed,Solar - Solar
+GULLRWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+GULLRWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+GUNNING1,wind,,Wind Turbine - Onshore,Wind - Wind
+GUTHEGA,hydro,,Hydro - Dam,Hydro - Water
+HALLWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+HALLWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+HAMISF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+HAUGHT11,solar,,Solar PV - Single axis tracking,Solar - Solar
+HAYMSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+HBESS1,battery,,Storage - Battery,Other - Other
+HBESSG1,battery,,,
+HBESSL1,battery,y,,
+HD1WF1,wind,,Wind Turbine - Onshore,Wind - Wind
+HDWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+HDWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+HDWF3,wind,,Wind Turbine - Onshore,Wind - Wind
+HEZ1,fossil,,Reciprocating Engine - Compression ignition,Fossil - Diesel
+HILLSTN1,solar,,Solar PV - Single axis tracking,Solar - Solar
+HPR1,battery,,Storage - Battery,Other - Other
+HPRG1,battery,,,
+HPRL1,battery,y,,
+HUGSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+HUMENSW,hydro,,Hydro - Dam,Hydro - Water
+HUMEV,hydro,,Hydro - Dam,Hydro - Water
+HVWWBA1,battery,,Storage - Battery,Other - Other
+HVWWBA1G,battery,,,
+HVWWBA1L,battery,y,,
+HVWWPV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+JBUTTERS,hydro,,Hydro - Dam,Hydro - Water
+JEMALNG1,solar,,Solar PV - Single axis tracking,Solar - Solar
+JLA01,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JLA02,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JLA03,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JLA04,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JLB01,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JLB02,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JLB03,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+JUNEESF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+KABANWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+KAREEYA1,hydro,,Hydro - Run of River,Hydro - Water
+KAREEYA2,hydro,,Hydro - Run of River,Hydro - Water
+KAREEYA3,hydro,,Hydro - Run of River,Hydro - Water
+KAREEYA4,hydro,,Hydro - Run of River,Hydro - Water
+KARSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+KEPBG1,battery,,Storage - Battery,Other - Other
+KEPSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+KEPWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+KIAMSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+KIATAWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+KINGASF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+KPP_1,fossil,,Turbine - Steam Super Critical,Fossil - Black Coal
+KSP1,solar,,Solar PV - Fixed,Solar - Solar
+LADBROK1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+LADBROK2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+LBB1,battery,,,
+LBBG1,battery,,Storage - Battery,Other - Other
+LBBL1,battery,y,,
+LEM_WIL,hydro,,Hydro - Dam,Hydro - Water
+LGAPWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+LGAPWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+LI_WY_CA,hydro,,Hydro - Dam,Hydro - Water
+LILYSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+LIMOSF11,solar,,Solar PV - Single axis tracking,Solar - Solar
+LIMOSF21,solar,,Solar PV - Single axis tracking,Solar - Solar
+LK_ECHO,hydro,,Hydro - Dam,Hydro - Water
+LKBONNY1,wind,,Wind Turbine - Onshore,Wind - Wind
+LKBONNY2,wind,,Wind Turbine - Onshore,Wind - Wind
+LKBONNY3,wind,,Wind Turbine - Onshore,Wind - Wind
+LNGS1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+LNGS2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+LONSDALE,fossil,,Reciprocating Engine - Compression ignition,Fossil - Diesel
+LOYYB1,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+LOYYB2,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+LRSF1,solar,,Solar PV - Fixed,Solar - Solar
+LYA1,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+LYA2,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+LYA3,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+LYA4,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+MACARTH1,wind,,Wind Turbine - Onshore,Wind - Wind
+MACKNTSH,hydro,,Hydro - Dam,Hydro - Water
+MANNSF2,solar,,Solar PV - Single axis tracking,Solar - Solar
+MANSLR1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MAPS2PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MAPS3PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MARYRSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MBAHNTH,fossil,,Reciprocating Engine - Spark ignition,Fossil - Waste Coal Mine Gas
+MBPS2PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MCINTYR1,wind,,Wind Turbine - Onshore,Wind - Wind
+MCKAY1,hydro,,Hydro - Dam,Hydro - Water
+MEADOWBK,hydro,,Hydro - Dam,Hydro - Water
+MERCER01,wind,,Wind Turbine - Onshore,Wind - Wind
+METZSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MEWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+MIDDLSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MINTARO,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+MLSP1,solar,,,
+MLWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+MOKOSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MOLNGSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MOORAWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+MOREESF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MORTLK11,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+MORTLK12,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+MOUSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MP1,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+MP2,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+MPP_1,fossil,,Turbine - Steam Super Critical,Fossil - Black Coal
+MPP_2,fossil,,Turbine - Steam Super Critical,Fossil - Black Coal
+MRTLSWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+MSTUART1,fossil,,Turbine - OCGT,Fossil - Diesel
+MSTUART2,fossil,,Turbine - OCGT,Fossil - Diesel
+MSTUART3,fossil,,Turbine - OCGT,Fossil - Diesel
+MTGELWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+MTMILLAR,wind,,Wind Turbine - Onshore,Wind - Wind
+MURRAY,hydro,,Hydro - Dam,Hydro - Water
+MUSSELR1,wind,,Wind Turbine - Onshore,Wind - Wind
+MUWAWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+MUWAWF2,wind,,Wind Turbine - Onshore,Wind - Wind
+MWPS1PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MWPS2PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MWPS3PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+MWPS4PV1,solar,,Solar PV - Single axis tracking,Solar - Solar
+NBHWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+NEVERSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+NEWENSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+NEWENSF2,solar,,Solar PV - Single axis tracking,Solar - Solar
+NPS,fossil,,Turbine - Steam Sub Critical,Fossil - Natural Gas Pipeline
+NSW1,rooftop,,,
+NUMURSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+NYNGAN1,solar,,Solar PV - Fixed,Solar - Solar
+OAKEY1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+OAKEY1SF,solar,,Solar PV - Fixed,Solar - Solar
+OAKEY2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+OAKEY2SF,solar,,Solar PV - Single axis tracking,Solar - Solar
+OAKLAND1,wind,,Wind Turbine - Onshore,Wind - Wind
+OSB-AG,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+PALOONA,hydro,,Hydro - Dam,Hydro - Water
+PAREPS1,solar,,Solar PV - Fixed,Solar - Solar
+PAREPW1,wind,,Wind Turbine - Onshore,Wind - Wind
+PARSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+PIBESS1,battery,,Storage - Battery,Other - Other
+PIBESSG1,battery,,,
+PIBESSL1,battery,y,,
+PIONEER,renewable,,,
+POAT110,hydro,,Hydro - Dam,Hydro - Water
+POAT220,hydro,,Hydro - Dam,Hydro - Water
+POR01,fossil,,Turbine - OCGT,Fossil - Diesel
+POR03,fossil,,Turbine - OCGT,Fossil - Diesel
+PORTWF,wind,,Wind Turbine - Onshore,Wind - Wind
+PPCCGT,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+PTSTAN1,fossil,,Reciprocating Engine - Compression ignition,Fossil - Diesel
+PUMP1,hydro,,,
+PUMP2,hydro,,,
+QBYNB1,battery,,Storage - Battery,Other - Other
+QBYNBG1,battery,,,
+QBYNBL1,battery,y,,
+QLD1,rooftop,,,
+QPS1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+QPS2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+QPS3,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+QPS4,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+QPS5,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+RANGEB1,battery,,Storage - Battery,Other - Other
+REECE1,hydro,,Hydro - Dam,Hydro - Water
+REECE2,hydro,,Hydro - Dam,Hydro - Water
+REPULSE,hydro,,Hydro - Dam,Hydro - Water
+RESS1,battery,,,
+RESS1G,battery,,Storage - Battery,Other - Other
+RESS1L,battery,y,,
+RIVNB2,battery,,Storage - Battery,Other - Other
+RIVNBG2,battery,,,
+RIVNBL2,battery,y,,
+ROMA_7,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+ROMA_8,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+ROWALLAN,hydro,,Hydro - Dam,Hydro - Water
+ROYALLA1,solar,,Solar PV - Fixed,Solar - Solar
+RPCG,renewable,,Other - Other,Renewable Biomass or Waste - Bagasse
+RRSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+RUBICON,hydro,,Hydro - Dam,Hydro - Water
+RUGBYR1,solar,,Solar PV - Single axis tracking,Solar - Solar
+RYANCWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+RYEPARK1,wind,,Wind Turbine - Onshore,Wind - Wind
+SA1,rooftop,,,
+SALTCRK1,wind,,Wind Turbine - Onshore,Wind - Wind
+SAPHWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+SEBSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+SHGEN,pumped,,Storage - Pumped hydro,Hydro - Water
+SHOAL1,renewable,,,
+SHPUMP,pumped,y,,
+SITHE01,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+SMCSF1,solar,,Solar PV - Fixed,Solar - Solar
+SNAPPER1,fossil,,Turbine - OCGT,Fossil - Diesel
+SNOWNTH1,wind,,Wind Turbine - Onshore,Wind - Wind
+SNOWSTH1,wind,,Wind Turbine - Onshore,Wind - Wind
+SNOWTWN1,wind,,Wind Turbine - Onshore,Wind - Wind
+SNOWYP,hydro,,,
+SNUG1,fossil,,Turbine - OCGT,Fossil - Diesel
+SRSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+STAN-1,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+STAN-2,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+STAN-3,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+STAN-4,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+STARHLWF,wind,,Wind Turbine - Onshore,Wind - Wind
+STOCKYD1,wind,,Wind Turbine - Onshore,Wind - Wind
+STUBSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+STUBSF2,solar,,Solar PV - Single axis tracking,Solar - Solar
+STWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+SUNRSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+SUNTPSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+SWAN_E,fossil,,Turbine - CCGT,Fossil - Coal Seam Methane
+TALWA1,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+TALWB1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+TARALGA1,wind,,Wind Turbine - Onshore,Wind - Wind
+TARONG#1,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+TARONG#2,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+TARONG#3,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+TARONG#4,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+TARRALEA,hydro,,Hydro - Dam,Hydro - Water
+TAS1,rooftop,,,
+TB2B1,battery,,Storage - Battery,Other - Other
+TB2BG1,battery,,Storage - Battery,Other - Other
+TB2BL1,battery,y,,
+TB2SF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+TBSF1,solar,,Solar PV - Fixed,Solar - Solar
+TIB1,battery,,Storage - Battery,Other - Other
+TIBG1,battery,,,
+TIBL1,battery,y,,
+TNPS1,fossil,,Turbine - Steam Super Critical,Fossil - Black Coal
+TORRB2,fossil,,Turbine - Steam Sub Critical,Fossil - Natural Gas Pipeline
+TORRB3,fossil,,Turbine - Steam Sub Critical,Fossil - Natural Gas Pipeline
+TORRB4,fossil,,Turbine - Steam Sub Critical,Fossil - Natural Gas Pipeline
+TREVALLN,hydro,,Hydro - Dam,Hydro - Water
+TRIBUTE,hydro,,Hydro - Dam,Hydro - Water
+TULLYSM1,renewable,,Turbine - Steam Super Critical,Renewable Biomass or Waste - Bagasse
+TUMUT3,hydro,,Hydro - Dam,Hydro - Water
+TUNGATIN,hydro,,Hydro - Dam,Hydro - Water
+TVCC201,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+TVPP104,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+UPPTUMUT,hydro,,Hydro - Dam,Hydro - Water
+URANQ11,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+URANQ12,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+URANQ13,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+URANQ14,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+VBB1,battery,,Storage - Battery,Other - Other
+VBBG1,battery,,,
+VBBL1,battery,y,,
+VIC1,rooftop,,,
+VP5,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+VP6,fossil,,Turbine - Steam Sub Critical,Fossil - Black Coal
+VPGS1,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+VPGS2,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+VPGS3,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+VPGS4,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+VPGS5,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+VPGS6,fossil,,Turbine - OCGT,Fossil - Natural Gas Pipeline
+W/HOE#1,pumped,,Storage - Pumped hydro,Hydro - Water
+W/HOE#2,pumped,y,Storage - Pumped hydro,Hydro - Water
+WAGGNSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WALGRV1,battery,,Storage - Battery,Other - Other
+WALGRVG1,battery,,,
+WALGRVL1,battery,y,,
+WANDB1,battery,,Storage - Battery,Other - Other
+WANDBG1,battery,,,
+WANDBL1,battery,y,,
+WANDSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WARWSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WARWSF2,solar,,Solar PV - Single axis tracking,Solar - Solar
+WATERLWF,wind,,Wind Turbine - Onshore,Wind - Wind
+WAUBRAWF,wind,,Wind Turbine - Onshore,Wind - Wind
+WDBESS1,battery,,,
+WDBESSG1,battery,,Storage - Battery,Other - Other
+WDBESSL1,battery,y,,
+WDGPH1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WELLSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WELNSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WEMENSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WGWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+WHITSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WINTSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WKIEWA1,hydro,,Hydro - Dam,Hydro - Water
+WKIEWA2,hydro,,Hydro - Dam,Hydro - Water
+WLWLSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WLWLSF2,solar,,Solar PV - Single axis tracking,Solar - Solar
+WOODLWN1,wind,,Wind Turbine - Onshore,Wind - Wind
+WOOLGSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WOOLNTH1,wind,,Wind Turbine - Onshore,Wind - Wind
+WPWF,wind,,Wind Turbine - Onshore,Wind - Wind
+WRSF1,solar,,Solar PV - Fixed,Solar - Solar
+WRWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+WSTWYSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WTAHB1,battery,,Storage - Battery,Other - Other
+WUNUSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+WYASF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+YABULU,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+YABULU2,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+YAMBUKWF,wind,,Wind Turbine - Onshore,Wind - Wind
+YARANSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+YARWUN_1,fossil,,Turbine - CCGT,Fossil - Natural Gas Pipeline
+YATSF1,solar,,Solar PV - Single axis tracking,Solar - Solar
+YENDWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+YSWF1,wind,,Wind Turbine - Onshore,Wind - Wind
+YWPS1,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+YWPS2,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+YWPS3,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
+YWPS4,fossil,,Turbine - Steam Sub Critical,Fossil - Brown Coal
