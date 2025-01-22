@@ -4,18 +4,18 @@
 Quick Summary
 =============
 
-There are three files - NEMWeb.py, 'DUID Categories.csv' and
+There are three key files - NEMWeb.py, 'DUID Categories.csv' and
 requirements.txt. Follow the usual Python procedures to use pip to
 install all the dependencies in requirements.txt.
 
-The first time this program is run (on Windows) it will read in the most
+The first time NEMWeb.py is run (on Windows) it will read in the most
 recent 12 calendar months of electricity generation data from
 nemweb.com.au, saving binary PKL files to %APPDATA%\\NEMWeb and saving
 'NEM Year by Category.xlsx' and 'NEM In Out List.xlsx' to
 %USERPROFILE%\\Documents. Progress is displayed and three graphs are
 shown.
 
-It runs much faster once the binary PKL files exist.
+NEMWeb.py runs much faster once the binary PKL files exist.
 
 Background
 ==========
@@ -199,7 +199,7 @@ repaired.
         
 """
 
-__version__ = '0.3' # 20 Jan 2025
+__version__ = '0.4' # 22 Jan 2025
 __author__ = 'John Hilton'
 
 from sys import argv
@@ -1161,6 +1161,18 @@ class NEMWeb:
         self.df_categories.to_excel(fullpath)
         self.show_elapsed()
 
+    def save_5_minute_dataframe(self):
+        """Save df_five_minute to 'NEM 12 Month Generation.xlsx'."""
+
+        # Save the current time for reporting elapsed seconds.
+        begin_time = datetime.now().replace(microsecond=0)
+        
+        fullpath = ''.join((self.output_dir,'NEM 12 Month Generation.xlsx'))
+        print(f'Saving {fullpath}')
+        self.df_five_minute.to_excel(fullpath)
+        td = datetime.now().replace(microsecond=0) - begin_time
+        print(f' Done - elapsed h:mm:ss: {str(td)}\n')
+
 def find_indices_below_threshold(nums, threshold):
     """Find all indices below the specified threshold value."""
     
@@ -1297,7 +1309,8 @@ def main(mirror_dir=None,
           ' Dispatch_SCADA data.')
     repair_missing_periods(df_five_minute,row_sum_5min_GW)
 
-    print('Showing interactive graph of repaired dispatch_SCADA data.')
+    print('Showing interactive graph of repaired dispatch_SCADA data.'
+          ' Close graph to continue.')
     row_sum_5min_GW = df_five_minute.sum(1)/1000
     plotGW5min(row_sum_5min_GW,
                f'Repaired Dispatch_SCADA data {from_month} - '
@@ -1316,7 +1329,8 @@ def main(mirror_dir=None,
     print(' Total number of nemweb.com.au data points: '
           f'{total_num_data_points:,}')
 
-    print('Showing interactive graph of NEM 5-minute generation.')
+    print('Showing interactive graph of NEM 5-minute generation.'
+          ' Close graph to continue.')
     row_sum_5min_GW = df_five_minute.sum(1)/1000
     plotGW5min(row_sum_5min_GW,
                f'NEM Generation {from_month} - {to_month}')
