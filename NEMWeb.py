@@ -201,13 +201,13 @@ repaired.
 __version__ = "0.4"  # 22 Jan 2025
 __author__ = "John Hilton"
 
-from sys import argv
+import os
 from re import search  # regular expressions
 from io import BytesIO, TextIOWrapper
 from zipfile import ZipFile
 from csv import reader
 from datetime import datetime, timedelta
-from numpy import ndarray, zeros, concatenate
+from numpy import zeros, concatenate
 from pickle import dump, load as pickle_load
 from requests import get as requests_get
 from bs4 import BeautifulSoup
@@ -218,6 +218,8 @@ from os import getenv as os_getenv
 from urllib.parse import urlparse
 from pandas import date_range, DataFrame, concat as pandas_concat
 import matplotlib.pyplot as plt
+from platformdirs import user_data_dir, user_documents_dir
+from dataclasses import dataclass, field
 
 
 class Blank:
@@ -228,23 +230,23 @@ class Blank:
     pass
 
 
+@dataclass
 class NEMWebCommon:
     """Base class providing common functionality for Dispatch_SCADA and
     Rooftop_PV data.
     """
+    
+    mirror_dir: str
+    data_dir: str
+    filelist: list[tuple[bool, str]] = field(init=False)
 
     WEB_ARCHIVE_URL = "https://www.nemweb.com.au/REPORTS/ARCHIVE/"
 
-    def __init__(self, mirror_dir, data_dir):
+    def __post_init__(self):
         """Builds three sorted lists of daily or weekly data files then
         merges them into one list prioritizing PKL files over local
         mirror files over nemweb.com.au ZIP files.
         """
-
-        # Initialise the local directories.
-        self.mirror_dir = mirror_dir
-        self.data_dir = data_dir
-
         # Build
         #   .remote_zipfile_list,
         #   .local_zipfile_list and
@@ -274,7 +276,7 @@ class NEMWebCommon:
             rzlist.pop()
         self.remote_zipfile_list = rzlist
 
-        if not self.mirror_dir is None:
+        if self.mirror_dir is not None:
             # Build a sorted list of the local daily ZIP files.
             path = "".join((self.mirror_dir, cls.WEB_SUBDIR))
             pattern = "".join((path, cls.FILENAME_PREFIX, "*.zip"))
@@ -312,7 +314,7 @@ class NEMWebCommon:
             if node.get("href").endswith("zip")
         ]
 
-    def select_files(self):
+    def select_files(self) -> list[tuple[bool, str]]:
         """Merge the three data file lists into one prioritizing local
         PKL data files over local ZIP files then nemweb.com.au ZIP
         files.
@@ -472,7 +474,7 @@ class NEMWebCommon:
             if is_zip:
                 self.load_nem_data_file(filepath)
                 # Save the day's data to a pickle file.
-                fullpath = "".join((str(data_dir), "\\", load.filename[:-4], ".pkl"))
+                fullpath = Path(data_dir) / Path(load.filename).with_suffix('.pkl')
                 print(f"Saving {fullpath}")
                 with open(fullpath, "wb") as ofile:
                     # dump(load.duid_list,ofile)
@@ -820,7 +822,7 @@ class RooftopPV(NEMWebCommon):
                     if o not in cls.REGION_IDS:
                         continue
                     state_index = cls.REGION_IDS.index(o)
-                    timestamp = row[load.interval_col]
+                    # timestamp = row[load.interval_col]
 
                     # Read the MW data into data_MW.
                     power = row[load.power_col]
@@ -906,7 +908,7 @@ class NEMWeb:
         self.output_dir = output_dir
 
         print(f"Obtaining filenames from\n    {NEMWebCommon.WEB_ARCHIVE_URL[8:-1]}")
-        if not mirror_dir is None:
+        if mirror_dir is not None:
             print(f"\n    {mirror_dir}")
         print(f"\n    {self.data_dir[:-1]}")
 
@@ -1247,7 +1249,7 @@ def read_duid_categories_csv(file_path):
             try:
                 # look up the category index
                 cat_index = cat_list.index(category)
-            except:  # new category
+            except ValueError:  # new category
                 cat_index = len(cat_list)
                 cat_list.append(category)
             duid_catidx[duid] = (cat_index, batt_load == "y")
@@ -1257,23 +1259,36 @@ def read_duid_categories_csv(file_path):
 def expand_env(s):
     """Expand a beginning environment variable. e.g. %APPDATA%."""
 
-    if (not s is None) and s[0] == "%":
+    if (s is not None) and s[0] == "%":
         a = s.split("%")
         s = "".join((os_getenv(a[1]), a[2]))
     return s
 
 
-def main(mirror_dir=None, data_dir="%APPDATA%\\nemweb\\", output_dir="%USERPROFILE%\\Documents\\"):
-    """The NEMWeb.py program."""
+def main(
+    mirror_dir=None,
+    data_dir=Path(user_data_dir('nemweb', appauthor='NEMWeb')),
+    output_dir=Path(user_documents_dir())
+):
+    """The NEMWeb.py program.
+    
+    Args:
+        mirror_dir: Optional directory containing local copies of ZIP files
+        data_dir: Directory for storing PKL files (defaults to platform-specific app data)
+        output_dir: Directory for output files (defaults to platform-specific documents)
+    """
+    # Convert mirror_dir to Path if provided
+    if mirror_dir:
+        mirror_dir = Path(mirror_dir)
 
-    nemweb = NEMWeb(expand_env(mirror_dir), expand_env(data_dir), expand_env(output_dir))
+    nemweb = NEMWeb(mirror_dir, str(data_dir) + os.path.sep, str(output_dir) + os.path.sep)
 
     number_of_files = len(nemweb.dispatch_scada.nem_MW_df_list)
     print(f"Assembling 12 months of data from {number_of_files} files...")
     nemweb.df_five_minute = nemweb.build_df_five_minute()
     nemweb.show_elapsed()
 
-    ds = nemweb.dispatch_scada
+    # ds = nemweb.dispatch_scada
     df_five_minute = nemweb.df_five_minute
 
     from_month = df_five_minute.axes[0][0].strftime("%b %Y")
@@ -1307,8 +1322,7 @@ def main(mirror_dir=None, data_dir="%APPDATA%\\nemweb\\", output_dir="%USERPROFI
     plotGW5min(row_sum_5min_GW, f"NEM Generation {from_month} - {to_month}")
 
     # Read in 'DUID Categories.csv' from the same directory as this program.
-    script_dirname = path_dirname(__file__)
-    nemweb.duid_categories_file = "".join((script_dirname, "\\DUID categories.csv"))
+    nemweb.duid_categories_file = Path(__file__).parent / "DUID categories.csv"
     print(f"Reading {nemweb.duid_categories_file}")
     o = read_duid_categories_csv(nemweb.duid_categories_file)
     nemweb.cat_list = o[0]
