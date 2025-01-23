@@ -7,6 +7,13 @@ A Python program providing easy access to the large amount of archived
 data of Australia's main electricity grid provided by the market
 operator, AEMO.
 
+## Just the Results
+For NEMWeb.py output for calendar year 2024 click to download...
+* [NEM In Out List Jan-Dec 2024.xlsx](
+  NEM%20In%20Out%20List%20Jan-Dec%202024.xlsx)
+* [NEM Year by Category Jan-Dec 2024.xlsx](
+  NEM%20Year%20by%20Category%20Jan-Dec%202024.xlsx)
+
 ## Usage
 There are three key files
 * NEMWeb.py
