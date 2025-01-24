@@ -887,7 +887,7 @@ class NEMWeb:
       interpolating the 30-minute intervals to 5-minute intervals.
       NOTE: Missing rooftop solar data is detected but yet to be
       repaired.
-    o A 'DUID categories.csv' file is loaded and used to produce a
+    o A 'DUID Categories.csv' file is loaded and used to produce a
       12 month dataframe having category column headings.
     o The categories dataframe is saved as an Excel spreadsheet.
     """
@@ -1231,7 +1231,7 @@ def plotGW5min(row_sum_5min_GW, title):
 
 
 def read_duid_categories_csv(file_path):
-    """Reads the DUID categories into
+    """Reads the DUID Categories into
     cat_list - a list of categories found in the CSV file
     duid_catidx - a dictionary of DUID names to indices into
     cat_list
@@ -1322,7 +1322,7 @@ def main(
     plotGW5min(row_sum_5min_GW, f"NEM Generation {from_month} - {to_month}")
 
     # Read in 'DUID Categories.csv' from the same directory as this program.
-    nemweb.duid_categories_file = Path(__file__).parent / "DUID categories.csv"
+    nemweb.duid_categories_file = Path(__file__).parent / "DUID Categories.csv"
     print(f"Reading {nemweb.duid_categories_file}")
     o = read_duid_categories_csv(nemweb.duid_categories_file)
     nemweb.cat_list = o[0]
