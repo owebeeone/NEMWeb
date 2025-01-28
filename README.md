@@ -14,6 +14,13 @@ For NEMWeb.py output for calendar year 2024 click to download...
 * [NEM Year by Category Jan-Dec 2024.xlsx](
   NEM%20Year%20by%20Category%20Jan-Dec%202024.xlsx)
 
+The category results are analysed in
+[NEM Analysis 2024.xlsx](NEM%20Analysis%202024.xlsx)
+and shown in [NEM Daily Generation 2024.pdf](
+NEM%20Daily%20Generation%202024.pdf) and
+[Average NEM Power Flows 2024.pdf](
+Average%20NEM%20Power%20Flows%202024.pdf).
+
 ## Usage
 There are three key files
 * NEMWeb.py
@@ -21,8 +28,8 @@ There are three key files
 * requirements.txt
 
 Follow the usual Python procedures to use pip to install all the
-dependencies in requirements.txt. The first time NEMWeb.py is run (on
-Windows) it will read in the most recent 12 calendar months of
+dependencies in requirements.txt. The first time NEMWeb.py is run
+it will read in the most recent 12 calendar months of
 electricity generation data from nemweb.com.au, saving binary PKL files
 to %APPDATA%\\NEMWeb then saving the following two files to
 %USERPROFILE%\\Documents;
@@ -141,3 +148,54 @@ speed up the time it takes NEMWeb's to read in the source data. The data
 from each daily Dispatch_SCADA or weekly ROOFTOP_PV ZIP file is then
 saved as Python pickle data in the local data directory using the
 original ZIP filename but with a .pkl extension.
+
+## Analysis
+The worksheet in [NEM Year by Category Jan-Dec 2024.xlsx](
+NEM%20Year%20by%20Category%20Jan-Dec%202024.xlsx) is copied (by value)
+into the first tab of [NEM Analysis 2024.xlsx](
+NEM%20Analysis%202024.xlsx). The following tabs are self explanatory:
+Row Calcs, Column Calcs, Daily Calcs, Calcs and Results.
+
+'Daily Calcs' includes a graph of average, min and max daily power
+generation values. This graph is copied to
+[NEM Daily Generation 2024.pdf](NEM%20Daily%20Generation%202024.pdf).
+
+'Calcs and Results' has seven input parameters (shown in orange cells)
+and calculates the average annual power flows through the NEM system.
+The results are shown diagrammatically in
+[Average NEM Power Flows 2024.pdf](
+Average%20NEM%20Power%20Flows%202024.pdf).
+
+### Demand Curve - i.e. paying customers
+The whole role of the NEM is to deliver electricity to paying customers.
+The demand curve is the graph showing this power. In this analysis it is
+the commercial and residential power consumption plus the consumption of
+aluminium smelters.
+
+## What's Missing?
+1. The power consumption of other large smelters and refineries apart from
+the four aluminium smelters is not known. Presumably their power delivery
+would not include distribution networks and so their distribution network
+losses should be removed from the analysis.
+
+2. The industry's typical 5% transmission loss factor is based on historic
+grids where most power transmission is over a relatively short distance
+from generators located nearby the cities they power. Power from
+renewables travels, on average, much larger distances and so there will
+be increased losses. This is not accounted for.
+
+3. New power transmission equipment is being added to deal with the added
+complexity of a renewables grid. For example, in addition to two
+synchronous condensers the Buronga substation in NSW has
+five phase-shifting transformers and four shunt reactors. Further
+research is needed to account for the power consumption of this new
+equipment although it's unlikely to be significant.
+
+4. State governments are paying smelters and refineries to shut down
+during periods of high demand to avoid blackouts in the general
+community. The impact on the power flow analysis is insignificant but,
+when considering potential blackout situations, it is very significant.
+These shutdowns buy back power that the facility was to purchase,
+effectively implementing a blackout of the facility although that term
+is avoided in polite circles. The payments are not publically disclosed
+and, FWIW, there is suspicion that the cost per kWh is massive.

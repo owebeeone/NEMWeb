@@ -7,8 +7,11 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NEMWeb", "NEMWeb.pyproj", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C33F4A76-EF06-4E59-B0BE-DF579EFB9342}"
 	ProjectSection(SolutionItems) = preProject
+		Average NEM Power Flows 2024.pdf = Average NEM Power Flows 2024.pdf
 		DUID Categories.csv = DUID Categories.csv
+		NEM Analysis 2024.xlsx = NEM Analysis 2024.xlsx
 		NEM In Out List Jan-Dec 2024.xlsx = NEM In Out List Jan-Dec 2024.xlsx
+		NEM Daily Generation 2024.pdf = NEM Daily Generation 2024.pdf
 		NEM Year by Category Jan-Dec 2024.xlsx = NEM Year by Category Jan-Dec 2024.xlsx
 		README.md = README.md
 		requirements.txt = requirements.txt
