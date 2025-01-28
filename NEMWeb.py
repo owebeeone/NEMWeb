@@ -204,10 +204,11 @@ __author__ = "John Hilton"
 import os
 from re import search  # regular expressions
 from io import BytesIO, TextIOWrapper
+import time
 from zipfile import ZipFile
 from csv import reader
 from datetime import datetime, timedelta
-from numpy import zeros, concatenate
+from numpy import zeros, concatenate, ndarray
 from pickle import dump, load as pickle_load
 from requests import get as requests_get
 from bs4 import BeautifulSoup
@@ -220,6 +221,74 @@ from pandas import date_range, DataFrame, concat as pandas_concat
 import matplotlib.pyplot as plt
 from platformdirs import user_data_dir, user_documents_dir
 from dataclasses import dataclass, field
+
+
+@dataclass
+class PlotManager:
+    """Manage a collection of plots."""
+
+    plots: list["PlotBase"] = field(init=False, default_factory=list)
+    is_interactive: bool = field(init=False, default=False)
+    is_closed: bool = field(init=False, default=False)
+
+    def pause_on_close(self, timeout_seconds: float = 5) -> None:
+        """Pause on close.
+        Wait timeout_seconds seconds before closing the plots unless interacts with the plots.
+        """
+        start_time = time.time()
+        is_timed_out = False
+        while not self.is_closed and (not is_timed_out or self.is_interactive):
+            manager = plt.get_current_fig_manager()
+            if manager is not None:
+                canvas = manager.canvas
+                if canvas.figure.stale:
+                    # Update the screen as the canvas wasn't fully drawn yet.
+                    canvas.draw_idle()
+                canvas.start_event_loop(0.1)
+            is_timed_out = time.time() - start_time >= timeout_seconds
+        return
+
+
+@dataclass
+class PlotBase:
+    """Base class for a plot."""
+
+    title: str
+    plot_manager: PlotManager
+    cid_close: object = field(init=False)
+    cid_click: object = field(init=False)
+
+    def onclick(self, event):
+        """Set the plot manager's is_interactive flag to True when the plot is clicked.
+        This is used to stop the plots from closing.
+        """
+        self.plot_manager.is_interactive = True
+
+    def onclose(self, event):
+        """Set the plot manager's is_closed flag to True when the plot is closed and should
+        cause the rest of the plots to close.
+        """
+        self.plot_manager.is_closed = True
+
+    def init_plot(self) -> tuple[plt.Figure, plt.Axes]:
+        """Initialise the plot."""
+        # Plot the results.
+        fig, ax = plt.subplots()
+
+        self.cid_close = fig.canvas.mpl_connect("close_event", lambda e: self.onclose(e))
+        self.cid_click = fig.canvas.mpl_connect("button_press_event", lambda e: self.onclick(e))
+
+        # Add a title to the plot.
+        ax.set_title(self.title)
+        # ax.set_aspect('equal')
+        # Use the "tight" layout.
+        plt.tight_layout(pad=0, h_pad=0, w_pad=0, rect=[0, 0, 1, 1])
+        ax.set_in_layout(False)
+        plt.ion()
+        # Render the image to the size of the screen.
+        fig.set_size_inches(10.5, 10.5)
+
+        return fig, ax
 
 
 class Blank:
@@ -235,7 +304,7 @@ class NEMWebCommon:
     """Base class providing common functionality for Dispatch_SCADA and
     Rooftop_PV data.
     """
-    
+
     mirror_dir: str
     data_dir: str
     filelist: list[tuple[bool, str]] = field(init=False)
@@ -474,7 +543,7 @@ class NEMWebCommon:
             if is_zip:
                 self.load_nem_data_file(filepath)
                 # Save the day's data to a pickle file.
-                fullpath = Path(data_dir) / Path(load.filename).with_suffix('.pkl')
+                fullpath = Path(data_dir) / Path(load.filename).with_suffix(".pkl")
                 print(f"Saving {fullpath}")
                 with open(fullpath, "wb") as ofile:
                     # dump(load.duid_list,ofile)
@@ -1219,15 +1288,38 @@ def repair(df_MW, start, end, prior, post):
             accums_GW += deltas_GW
 
 
-def plotGW5min(row_sum_5min_GW, title):
-    """Generate and show a plot of five minute interval GW data."""
+@dataclass
+class PlotGW5min(PlotBase):
+    """Plot five minute interval GW data. This will only show the plot once plot_data() is called."""
 
-    plt.plot(row_sum_5min_GW)
-    plt.ylim((0.0))
-    plt.xlabel("Date/Time")
-    plt.ylabel("GW")
-    plt.title(title)
-    plt.show()
+    row_sum_5min_GW: ndarray
+
+    def plot_data(self):
+        fig, ax = self.init_plot()
+        ax.plot(self.row_sum_5min_GW)
+        ax.set_ylim((0.0))
+        ax.set_xlabel("Date/Time")
+        ax.set_ylabel("GW")
+        ax.set_title(self.title)
+        fig.show()
+
+
+@dataclass
+class PlotManagerGW5min(PlotManager):
+    """PlotManagerGW5min is a class that manages a collection of plots."""
+
+    def plotGW5min(self, row_sum_5min_GW: ndarray, title: str) -> None:
+        """Create PlotGW5min to later show a plot of five minute interval GW data.
+        All the plots are stored in LIST_OF_PLOTS and will be shown when do_plots() is called.
+        """
+        self.plots.append(
+            PlotGW5min(plot_manager=self, row_sum_5min_GW=row_sum_5min_GW, title=title)
+        )
+
+    def do_plots(self) -> None:
+        """Show all the plots stored in LIST_OF_PLOTS."""
+        for plot in self.plots:
+            plot.plot_data()
 
 
 def read_duid_categories_csv(file_path):
@@ -1267,11 +1359,11 @@ def expand_env(s):
 
 def main(
     mirror_dir=None,
-    data_dir=Path(user_data_dir('nemweb', appauthor='NEMWeb')),
-    output_dir=Path(user_documents_dir())
+    data_dir=Path(user_data_dir("nemweb", appauthor="NEMWeb")),
+    output_dir=Path(user_documents_dir()),
 ):
     """The NEMWeb.py program.
-    
+
     Args:
         mirror_dir: Optional directory containing local copies of ZIP files
         data_dir: Directory for storing PKL files (defaults to platform-specific app data)
@@ -1295,14 +1387,15 @@ def main(
     to_month = (df_five_minute.axes[0][-1] - timedelta(days=1)).strftime("%b %Y")
     print("Showing interactive graph of raw dispatch_SCADA data. Close graph to continue.")
     row_sum_5min_GW = df_five_minute.sum(1) / 1000
-    plotGW5min(row_sum_5min_GW, f"Raw Dispatch_SCADA data {from_month} - {to_month}")
+    pmgr = PlotManagerGW5min()
+    pmgr.plotGW5min(row_sum_5min_GW, f"Raw Dispatch_SCADA data {from_month} - {to_month}")
 
     print("Finding and interpolating any short period of missing Dispatch_SCADA data.")
     repair_missing_periods(df_five_minute, row_sum_5min_GW)
 
     print("Showing interactive graph of repaired dispatch_SCADA data. Close graph to continue.")
     row_sum_5min_GW = df_five_minute.sum(1) / 1000
-    plotGW5min(row_sum_5min_GW, f"Repaired Dispatch_SCADA data {from_month} - {to_month}")
+    pmgr.plotGW5min(row_sum_5min_GW, f"Repaired Dispatch_SCADA data {from_month} - {to_month}")
 
     nemweb.show_elapsed()
     print("Adding rooftop solar data...")
@@ -1319,7 +1412,7 @@ def main(
 
     print("Showing interactive graph of NEM 5-minute generation. Close graph to continue.")
     row_sum_5min_GW = df_five_minute.sum(1) / 1000
-    plotGW5min(row_sum_5min_GW, f"NEM Generation {from_month} - {to_month}")
+    pmgr.plotGW5min(row_sum_5min_GW, f"NEM Generation {from_month} - {to_month}")
 
     # Read in 'DUID Categories.csv' from the same directory as this program.
     nemweb.duid_categories_file = Path(__file__).parent / "DUID categories.csv"
@@ -1338,6 +1431,11 @@ def main(
 
     nemweb.save_in_out_and_cat()
 
+    # Show the plots and pause on close.
+    pmgr.do_plots()
+    pmgr.pause_on_close(
+        5
+    )  # Wait 5 seconds before closing the plots unless interacts with the plots.
     return nemweb
 
 
